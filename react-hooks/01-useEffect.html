@@ -10,15 +10,16 @@
     <script type="text/babel">
         function Timer(){
             const [currentTime, setCurrentTime] = React.useState(Date())
+            let timerID = 0
             const onBtnStartClick = () => {
-                const timerId = setInterval(() => {
+                timerId = setInterval(() => {
                     setCurrentTime(Date())    
                 }, 1000);
                 console.log('[start] timerId = ', timerId)
             }
             const onBtnStopClick = () => {
-                // console.log('[start] timerId = ', timerId)
-                // clearInterval(timerId)
+                 console.log('[start] timerId = ', timerId)
+                 clearInterval(timerId)
             }
             return (
                 <>
